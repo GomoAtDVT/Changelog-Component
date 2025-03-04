@@ -1,0 +1,82 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #000;
+    --grey: #8d8d8d;
+    --white: #fff;
+}
+
+.changelog-container {
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    place-items: center;
+    border: 2px solid var(--black);
+    border-radius: 2rem;
+    height: max-content;
+    margin: 10px;
+    font-size: 13px;
+}
+
+.title {
+    margin: 2rem;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.description {
+    color: var(--grey);
+}
+
+.changelog-content-container {
+    display: grid;
+    grid-template-columns: 1fr 0.1fr 2fr;
+    margin: 50px 20px 30px;
+}
+
+.changelog-content-container-dates {
+    place-items: end;
+    color: var(--grey);
+}
+
+.changelog-content-container-dots {
+    position: relative;
+}
+
+.changelog-content-container-dots::before {
+    content: '';
+    position: absolute;
+    transform: rotate(90deg);
+    top: 53%;
+    left: -162.5px;
+    height: 1px;
+    width: 420px;
+    background: var(--black);
+    z-index: 1;
+}
+
+.changelog-content-container-dots p {
+    position: relative;
+    background: var(--black);
+    padding: 7.5px; 
+    border-radius: 50%;
+    margin-inline: 40px 20px;
+}
+
+.content {
+    margin-top: 40px;
+}
+
+.visitButton {
+    color: var(--white);
+    background: var(--black);
+    padding: 15px;
+    border-radius: 1em;
+    outline: none;
+    border: transparent;
+    margin: 20px;
+}
